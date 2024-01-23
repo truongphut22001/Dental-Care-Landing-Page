@@ -26,10 +26,31 @@ a {
     margin: 0px auto;
 }
 
+.btn {
+    --height: 60px;
+    display: inline-block;
+    min-width: 205px;
+    height: var(--height);
+    padding: 0 20px;
+    border-radius: 99px;
+    border: 1px solid #2e80ce;
+    text-align: center;
+    line-height: var(--height);
+    color: #fff;
+    font-size: 1.8rem;
+    background: #2e80ce;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
 /* Header */
 .header {
     min-height: 100vh;
     background: var(--header-bg);
+    padding-top: 30px;
 }
 
 .logo {
@@ -76,4 +97,53 @@ a {
 .logo__brand--small {
     font-size: 1.2em;
     font-weight: 300;
+}
+
+/* Header top */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.navbar__link {
+    padding: 4px 21px;
+    color: #c9d2da;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.navbar__link:hover,
+.navbar__item--active {
+    color: #fff;
+    text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__item--active::before {
+    position: relative;
+    left: -8px;
+    top: -2px;
+    display: inline-block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.action__login {
+    padding: 4px 21px;
+    color: #c9d2da;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.action__signup {
+    --height: 44px;
+    min-width: 104px;
+    font-size: 1.6rem;
 }
